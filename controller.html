@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pointless-style Score Controller</title>
+  <link rel="stylesheet" href="./controller.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div>
+        <h1>Pointless-style score controller</h1>
+        <p class="sub">Drive the 1920×1080 OBS browser source from this page.</p>
+      </div>
+      <div id="status" class="status local">Local test mode</div>
+    </div>
+
+    <div class="grid">
+      <section class="panel controls">
+        <label for="target">Reveal score</label>
+        <div class="score-row">
+          <input id="target" type="number" inputmode="numeric" min="0" max="100" value="50" />
+          <button id="reveal" class="reveal">COUNT DOWN</button>
+        </div>
+
+        <div class="quick" aria-label="Quick score buttons">
+          <button data-score="0">0</button>
+          <button data-score="10">10</button>
+          <button data-score="25">25</button>
+          <button data-score="50">50</button>
+          <button data-score="75">75</button>
+          <button data-score="100">100</button>
+        </div>
+
+        <button id="wrong" class="wrong">WRONG ANSWER — X</button>
+        <div class="penalty-note">Wrong answer awards 100 points.</div>
+        <button id="reset" class="reset">RESET TO 100</button>
+        <div id="eventlog" class="eventlog"></div>
+
+        <div class="info">
+          <div class="info-row">
+            <label>Room</label>
+            <div id="room" class="mono"></div>
+          </div>
+          <div class="info-row">
+            <label>OBS browser-source URL</label>
+            <div id="overlay-url" class="mono"></div>
+            <button id="copy-url" class="copy">Copy browser-source URL</button>
+            <p class="hint">Set the OBS Browser Source to 1920×1080. For local OBS testing, start <strong>local_server.py</strong>. For the public GitHub version, configure Firebase in <strong>firebase-config.js</strong>.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel preview">
+        <iframe id="preview" title="Overlay preview"></iframe>
+      </section>
+    </div>
+  </div>
+  <script type="module" src="./controller.js"></script>
+</body>
+</html>
