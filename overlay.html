@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Pointless-style OBS Overlay</title>
+  <link rel="stylesheet" href="./overlay.css" />
+</head>
+<body>
+  <main id="viewport" aria-label="Score overlay">
+    <section id="stage">
+      <img id="backdrop" src="./assets/backdrop.png" alt="" draggable="false" />
+      <div id="column-backglow"></div>
+      <div id="column-chase-a" class="column-chase"></div>
+      <div id="column-chase-b" class="column-chase"></div>
+      <div id="finish-white-flash"></div>
+      <div id="landing-glow"></div>
+      <div id="bars-window"><img id="bars" src="./assets/points_bar.png" alt="" draggable="false" /></div>
+      <div id="score">100</div>
+      <div id="x-points">100 POINTS</div>
+      <div id="scanline"></div>
+      <div id="tower-flash-left"></div>
+      <div id="tower-flash-right"></div>
+      <div id="pointless-green-colorize"></div>
+      <div id="pointless-green-flash"></div>
+      <div id="red-colorize"></div>
+      <div id="red-flash"></div>
+    </section>
+  </main>
+  <script type="module" src="./overlay.js"></script>
+</body>
+</html>
